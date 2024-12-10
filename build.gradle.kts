@@ -17,6 +17,8 @@ dependencies {
     implementation("io.github.bonigarcia:webdrivermanager:5.5.3")
     implementation("org.slf4j:slf4j-api:1.7.36")
     implementation("org.slf4j:slf4j-simple:1.7.36")
+    implementation("org.apache.poi:poi:5.2.3")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
 }
 
 
