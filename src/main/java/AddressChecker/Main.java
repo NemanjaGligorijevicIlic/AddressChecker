@@ -10,7 +10,7 @@ import static AddressChecker.Helper.AddressCheckerHelper.*;
 import static AddressChecker.SeleniumChecker.Checker.checkAddresses;
 
 public class Main {
-    private static List<Person> people = new ArrayList<>();
+    private static final List<Person> people = new ArrayList<>();
     public static void main(String[] args) {
         //people = ExcelReader.readFromExcel();
         //people.forEach(a -> System.out.println(a.getName() + " " + a.getAddress()));
