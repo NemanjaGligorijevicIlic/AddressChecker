@@ -4,8 +4,6 @@ public class AddressCheckerHelper {
     public static String formatAddress(String address){
         String formatted = address.trim();
         formatted = formatted.replaceAll("\\s+", " ");
-        formatted = formatted.toLowerCase();
-        formatted = capitalizeFirstLetterOfWords(formatted);
 
         formatted = formatted.replaceAll("v\\.(?![a-zA-Z])", "vägen");
         formatted = formatted.replaceAll("g\\.(?![a-zA-Z])", "gatan");

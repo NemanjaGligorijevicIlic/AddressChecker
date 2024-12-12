@@ -13,8 +13,8 @@ public class Main {
     private static List<Person> people = new ArrayList<>();
     public static void main(String[] args) {
         people = ExcelReader.readFromExcel();
-        //people.forEach(a -> System.out.println(a.getName() + " " + a.getAddress()));
+        people.forEach(a -> System.out.println(a.getName() + " " + a.getAddress()));
         System.out.println(people.size());
-        checkAddresses(people);
+        //checkAddresses(people);
     }
 }

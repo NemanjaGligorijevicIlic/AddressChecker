@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcelReader {
-    private static final String excelFilePath = "/Users/Nemanj Gligorijevic Ilic/Desktop/AddressChecker/DB.xlsx";
+    private static final String excelFilePath = "/Users/Nemanj Gligorijevic Ilic/Desktop/AddressChecker/DB1.xlsx";
     private static final List<Person> people = new ArrayList<>();
 
     public static List<Person> readFromExcel(){
