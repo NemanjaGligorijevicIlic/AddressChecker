@@ -49,9 +49,9 @@ public class Checker {
                     File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
                     File destination = new File(screenshotDirectory + "/screenshot_" + dt + ".png");
                     Files.copy(screenshot.toPath(), destination.toPath());
-                    System.out.println("Text not found, screenshot saved as 'screenshot.png'");
+                    System.out.println("Text not found, screenshot saved as 'screenshot.png' " + formattedAddress);
                 } else {
-                    System.out.println("Text found!");
+                    System.out.println("Text found! " + formattedAddress);
                 }
             }
         } catch (Exception e) {

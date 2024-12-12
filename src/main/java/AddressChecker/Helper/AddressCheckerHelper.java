@@ -13,7 +13,16 @@ public class AddressCheckerHelper {
         formatted = formatted.replaceAll("\\blgh\\s*", "lgh ");
         formatted = formatted.replaceAll("\\bLgh\\s*", "lgh ");
 
-        return formatted;
+        formatted = formatted.replaceAll("(?<=\\d)([a-z])", " $1");
+        StringBuilder result = new StringBuilder();
+        for (String word : formatted.split(" ")) {
+            if (word.length() == 1 && Character.isLowerCase(word.charAt(0))) {
+                result.append(Character.toUpperCase(word.charAt(0))).append(" ");
+            } else {
+                result.append(word).append(" ");
+            }
+        }
+        return result.toString().trim();
     }
 
     private static String capitalizeFirstLetterOfWords(String text) {
