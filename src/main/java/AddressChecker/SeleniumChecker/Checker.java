@@ -13,6 +13,8 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static AddressChecker.Helper.AddressCheckerHelper.formatAddress;
+
 public class Checker {
     private static final String screenshotDirectory = "/Users/Nemanj Gligorijevic Ilic/Desktop/screenshots";
     private static final String ratsitAddress = "https://www.ratsit.se/";
@@ -41,7 +43,8 @@ public class Checker {
                 Thread.sleep(5000);
 
                 String address = person.getAddress();
-                if (!driver.getPageSource().contains(address)) {
+                String formattedAddress = formatAddress(address);
+                if (!driver.getPageSource().contains(formattedAddress)) {
                     LocalDateTime dt = LocalDateTime.now();
                     File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
                     File destination = new File(screenshotDirectory + "/screenshot_" + dt + ".png");
